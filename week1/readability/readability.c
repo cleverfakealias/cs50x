@@ -21,7 +21,6 @@ int main(void)
     int words = count_words(text);
     int sentences = count_sentences(text);
 
-
     // Calculate the index value
     float coleman_laiu_index = compute_coleman_laiu_index(letters, words, sentences);
 
@@ -72,16 +71,16 @@ int count_sentences(string text)
     return count;
 }
 
-string get_input_string(string prompt_string)
+string get_input_string(string)
 {
-    return get_string("%s: ", prompt_string);
+    return get_string(prompt_string);
 }
 
 float compute_coleman_laiu_index(int letters, int words, int sentences)
 {
     // Compute the Coleman-Liau index
-    float L = (float) letters / words * 100;
-    float S = (float) sentences / words * 100;
+    float L = (float)letters / words * 100;
+    float S = (float)sentences / words * 100;
     // Return the final calculation
     return 0.0588 * L - 0.296 * S - 15.8;
 }

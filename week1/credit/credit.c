@@ -20,8 +20,10 @@ long get_input_number()
     long card_number;
     do
     {
-        card_number = get_int("Number: ");
-    } while (card_number < 0);
+        // get long because card numbers are bigger than int can hold.
+        card_number = get_long("Number: ");
+    }
+    while (card_number < 0);
     return card_number;
 }
 
@@ -50,7 +52,7 @@ long get_start_digits(long card_number, int wanted_digits)
         card_number /= 10;
     }
     // make sure to cast back to int
-    return (long)card_number;
+    return (long) card_number;
 }
 
 bool compute_checksum_validity(long card_number)

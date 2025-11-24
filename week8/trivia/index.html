@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                       let correctList = document.querySelectorAll('.correct');
+                    for (let i = 0; i < correctList.length; i++) {
+                        correctList[i].addEventListener('click', function() {
+                        correctList[i].style.backgroundColor = 'green';
+                        document.querySelector('#feedbackBlock').innerHTML = 'Correct!';
+                    })
+                    }
+
+                    let incorrectList = document.querySelectorAll('.incorrect');
+                    for (let i = 0; i < incorrectList.length; i++) {
+                        incorrectList[i].addEventListener('click', function() {
+                            incorrectList[i].style.backgroundColor = 'red';
+                            document.querySelector('#feedbackBlock').innerHTML = 'How could you?!';
+                        }
+                    )}
+                    document.querySelector('#checkAnswer').addEventListener('click', function() {
+                        let input = document.querySelector('input');
+                        if (input.value == 'Midnight') {
+                            input.style.backgroundColor = 'green';
+                            document.querySelector('#feedbackBlock2').innerHTML = "Nice work, Redditor!";
+                        } else {
+                            input.style.backgroundColor = 'red';
+                            document.querySelector('#feedbackBlock2').innerHTML = "Try again...";
+                        }
+
+                    })
+
+                });
+    </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice</h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <div>
+                    <!--
+                        Use document.querySelector to query for a single HTML element.
+                        Use document.querySelectorAll to query for multiple HTML elements that match a query.
+                        addEventListener - add to button so you can call into the JS function/change css etc.
+                    -->
+                        <h3>Is my dog adorable?</h3>
+                        <img className="" src="Bailey lights.jpg"
+                            style="height: 350px;"
+                            alt="Imagine the cutest husky you ever saw, right here"
+                        >
+                        <br>
+                        <div>
+                            <!--Yes, Of Course, Obviously, No-->
+                            <button class="correct">YES!</button>
+                            <button class="correct">Of course!</button>
+                            <button class="correct">Absolutely.</button>
+                            <button class="incorrect">NO?</button>
+                        </div>
+                        <div>
+                            <p id="feedbackParagraph"><h4 id="feedbackBlock"></h4></p>
+                        </div>
+                 </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>When does the Narwhal bacon?</h3>
+                <input type="text"></input>
+                <button id="checkAnswer">Check Answer</button>
+                <p id="feedbackParagraph2"><h4 id="feedbackBlock2"></h4></p>
+
+            </div>
+        </div>
+    </body>
+</html>

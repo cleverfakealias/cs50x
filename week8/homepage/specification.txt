@@ -1,0 +1,45 @@
+Elements used:
+1. div
+2. header
+3. title
+4. footer
+5. section
+6. article
+7. aside
+8. ol
+9. ul
+10. li
+11. p
+12. h1
+13. h4
+14. h5
+
+
+CSS Selectors:
+1. body
+2. h1, h2, h3, h4, h5, h6
+3. .card-title
+4. li
+5. section
+6. p
+7. .card-text
+8. card
+9. .navbar-brand
+10. .navbar-toggler-icon
+11. .nav-item
+12. header
+13. ol
+14. ul
+
+
+CSS properties:
+1. color
+2. background-color
+3. margin
+4. font-family
+5. padding
+6. border-radius
+7. box-shadow
+
+
+I used javascript to load navigation built with Bootstrap components.

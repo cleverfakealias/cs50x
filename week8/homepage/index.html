@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Welcome to The Den!</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- import our shared functions so we can use the header across pages for our naviation -->
+    <script src="functions.js"></script>
+    <!-- main DOM script to execute when page loaded -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        loadHeader();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container text-center">
+      <div class="row">
+        <!-- place to insert the header HTML -->
+        <div class="headerHtml"></div>
+        <!-- Other content will go here-->
+        <div class="grid text-center">
+          <header>
+            <h1 class="cyanText">Learn some facts about random stuff here!</h1>
+          </header>
+          <div class="g-col-12">
+            <div class="card w-80 pb-2">
+              <div class="card-body">
+                <h5 class="card-title">Click below to learn about Huskies!</h5>
+                <p class="card-text">Learn about huskies!</p>
+                <a href="/huskies" class="btn btn-primary">Dergs ahead!</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="g-col-12">
+            <div class="card w-80 pb-2">
+              <div class="card-body">
+                <h5 class="card-title">Click below to learn about Wolves!</h5>
+                <p class="card-text">Learn about Wolves!</p>
+                <a href="/wolves" class="btn btn-primary">Wild dergs ahead!</a>
+              </div>
+            </div>
+          </div>
+          <div class="g-col-8">
+            <div class="card w-800 pb-2">
+              <div class="card-body">
+                <h5 class="card-title">Click below to learn about me!</h5>
+                <p class="card-text">Learn about me!</p>
+                <a href="/about" class="btn btn-primary">Pack leader ahead!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center">
+      <p>
+        <small>Made with love, by me.</small>
+      </p>
+    </footer>
+  </body>
+</html>

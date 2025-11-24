@@ -1,0 +1,68 @@
+body {
+  background-color: #333333;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #8cd2f4;
+}
+.card-title {
+  color: #8cd2f4;
+}
+
+li {
+  color: #8cd2f4;
+  margin: 0.25rem;
+  padding: 0.25rem;
+}
+
+section {
+  background-color: #262626;
+  margin: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  color: #ffffff;
+}
+
+.card-text {
+  color: #4f2683;
+}
+
+.card {
+  margin: 0.5rem;
+}
+
+.navbar-brand {
+  color: #ffd700;
+}
+
+.navbar-toggler-icon {
+  background-color: #ffd700;
+}
+
+.nav-item {
+  background-color: #8cd2f4;
+  margin: 0.5rem;
+  border-radius: 4px;
+}
+
+.nav-link {
+  border-radius: 4px;
+}
+
+header {
+  margin: 0.5rem;
+}
+
+ol,
+ul {
+  margin: 0.5rem;
+}

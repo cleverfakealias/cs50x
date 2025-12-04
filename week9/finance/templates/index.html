@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock Portfolio
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- loop on the table rows and populate the data -->
+             {% for holding in holdings %}
+             <tr>
+                <td>{{ holding.symbol }}</td>
+                <td>{{ holding.shares }}</td>
+                <td>{{ holding.price | usd }}</td>
+                <td>{{ holding.total | usd }}</td>
+             </tr>
+             {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="3">Cash</td>
+                <!-- use the cash passed in -->
+                <td class="border-0 fw-bold text-end">{{ cash | usd}}</td>
+            </tr>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="3">Grand Total</td>
+                <!-- use the grand total passed in -->
+                <td class="border-0 fw-bold text-end">{{ grand_total | usd }}</td>
+            </tr>
+        </tfoot>
+    </table>
+
+{% endblock %}
